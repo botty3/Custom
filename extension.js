@@ -422,7 +422,7 @@
     //Change the bots default settings and make sure they are loaded on launch
 
     localStorage.setItem("bottylicioussettings", JSON.stringify({
-		botName: "bottylicious",
+		botName: "Bottylicious",
 		language: "english",
 		chatLink: "https://rawgit.com/bottylicious/custom/master/lang/en.json",
 		scriptLink: "https://rawgit.com/bottylicious/source/master/bottylicious.js",
