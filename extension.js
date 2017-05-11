@@ -36,38 +36,38 @@
 				}
 			}
 		};
-				
-		bot.commands.debCommand = {
-			command: 'deb',
-			rank: 'host',
+
+		bot.commands.dancecommand = {
+			command: 'dance',
+			rank: 'user',
 			type: 'exact',
-			functionality: function (chat, cmd) {
-				var randomInt = Math.floor((Math.random() * 5) + 1);
+			functionality: function(chat, cmd) {
 				if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
 				if (!bot.commands.executable(this.rank, chat)) return void (0);
 				else {
+					var randomInt = Math.floor((Math.random() * 5) + 1);
+					
 					switch (randomInt) {
 						case 1:
-							API.sendChat("The Great Oz has Spoken!");
+							API.sendChat("Let's boogie, dance!");
 							break;
 						case 2:
-							API.sendChat("All Hail Deb Stylus!");
-								break;
+							API.sendChat("I'm a dancing machine!");
+							break;
 						case 3:
-							API.sendChat("Beep Beep Boop Beep!");
+							API.sendChat("Dancing, work work work work!");
 							break;
 						case 4:
-							API.sendChat("ERROR! ERROR! System Alert: Rebooting!");
+							API.sendChat("Shake that tail feather!");
 							break;
 						case 5:
-							API.sendChat("How are you today Deb Stylus!");
+							API.sendChat("Everyone, do you the shuffle!");
 							break;
-					}
-						
+					}	
 				}
 			}
 		};
-
+		
 		bot.commands.falconPunchCommand = {
 			command: 'falconpunch',
 			rank: 'user',
@@ -77,21 +77,6 @@
 				if (!bot.commands.executable(this.rank, chat)) return void (0);
 				else {
 					API.sendChat("Hold on! The death punch is coming!");
-				}
-			}
-		};
-		
-		
-		bot.commands.nevereverCommand = {
-			command: 'neverever',
-			rank: 'host',
-			type: 'startsWith',
-			functionality: function (chat, cmd) {
-				if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
-				if (!bot.commands.executable(this.rank, chat)) return void (0);
-				else {
-					var msg = chat.message.substr(cmd.length + 1);
-					API.sendChat("Never have I ever ... " + msg);
 				}
 			}
 		};
@@ -188,7 +173,7 @@
 							API.sendChat("@" + randomUser + ", are you thinking what I'm thinking?");
 							break;
 						case 2:
-							API.sendChat("@" + randomUser + ", how do you like YouTunes?");
+							API.sendChat("@" + randomUser + ", how do you like Ell Gee's Hot Hitz?");
 							break;
 						case 3:
 							API.sendChat("@" + randomUser + ", can we be friends?");
@@ -249,19 +234,6 @@
 				API.sendChat("@" + chat.un + " rolled a " + diceRoll);
 			}
 		};
-
-		bot.commands.snausCommand = {
-			command: 'snaus',
-			rank: 'user',
-			type: 'exact',
-			functionality: function(chat, cmd) {
-				if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
-				if (!bot.commands.executable(this.rank, chat)) return void (0);
-				else {
-					API.sendChat("Love dem Snausages!");
-				}
-			}
-		};
 	
 		bot.commands.talkcommand = {
 			command: 'talk',
@@ -287,7 +259,7 @@
 							API.sendChat("@" + chat.un + ", you do know you're talking to a robot?");
 							break;
 						case 5:
-							API.sendChat("@" + chat.un + ", Domo Arigato!");
+							API.sendChat("@" + chat.un + ", Bottylicious!");
 							break;
 					}	
 				}
